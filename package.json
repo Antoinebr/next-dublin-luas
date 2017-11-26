@@ -1,0 +1,21 @@
+{
+  "name": "NextLuas.js",
+  "version": "1.0.0",
+  "description": "Get the next Luas at a given station",
+  "main": "app.js",
+  "engines": {
+    "node": "8.7.0"
+  },
+  "scripts": {
+    "test": "echo \"No tests yet\"; exit 1;",
+    "start": "node app.js"
+  },
+  "author": "Antoine Brossault",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "xml2js": "^0.4.17"
+  }
+}
