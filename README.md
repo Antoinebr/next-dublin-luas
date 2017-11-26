@@ -1,19 +1,20 @@
-# dublinbus-luas-api
-api for real-time information for Dublin Bus and Luas written in nodejs using hapi. Reads data from real-time api's from Dublin bus and Luas and converts to a client friendly JSON format.
+# When the next Dublin Luas ? 
 
-endpoints:
+It's only one function that returns a promise : 
+
+```JavaScript 
+
+let myLuas = require('./myLuas.js');
+
+let station = 'tpt';
+
+myLuas.getNextLuas(station).then( next =>  console.log(`The next luas at ${station} is in ${next}`) );
 
 ```
-/bus/route/{route_number}
-/bus/stop/{stop_number}
 
-/luas/stops
-/luas/stop/{stop_id}
-```
+### When the next Luas at the Point 
 
-### Requires
-
-* nodejs v7 +
+https://radiant-plains-56277.herokuapp.com/
 
 ### To run
 
