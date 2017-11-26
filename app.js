@@ -12,9 +12,9 @@ let station = 'tpt';
 
 app.use(cors());
 
-app.get('/nextLuas', function (req, res, next) {
+app.get('*', function (req, res, next) {
 
-    myLuas.getNextLuas(station).then( next =>  res.json(next) );
+    myLuas.getNextLuas(station).then( next =>  res.json({next}) );
 
 
 })
