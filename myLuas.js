@@ -12,16 +12,17 @@ module.exports = (function() {
       
                 axios.get(`https://luasforecasts.rpa.ie/xml/get.ashx?stop=${station}&action=forecast&encrypt=false`)
                 .then(response => {
-                
-            
+                            
                     parseXml(response.data, { mergeAttrs: true, explicitArray: false }, (err, result) => {
                 
-                        if (err) console.log(' ⚠️ XML_PARSE_ERROR');
-                        
                         let when = result.stopInfo.direction[1].tram[0].dueMins;
 
-                        resolve( (when === "DUE") ? 0 : when );
-                
+                        if (err) reject('XML_PARSE_ERROR');
+                        
+                        if (typeof(when) === 'undefined' ) resolve ('!');
+
+                        else resolve( (when === "DUE") ? 0 : when );
+                        
                     });
                                 
                 })

@@ -12,11 +12,12 @@ let station = 'tpt';
 
 app.use(cors());
 
+
 app.get('*', function (req, res, next) {
 
-    myLuas.getNextLuas(station).then( next =>  res.json({next}) );
-
-
+    myLuas.getNextLuas(station)
+        .then( next =>  res.json({code:200, next}) )
+        .catch( error => res.json( {code: 500, error: error} ) );
 })
 
 app.listen(PORT, function () {

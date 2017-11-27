@@ -8,13 +8,15 @@ let myLuas = require('./myLuas.js');
 
 let station = 'tpt';
 
-myLuas.getNextLuas(station).then( next =>  console.log(`The next luas at ${station} is in ${next}`) );
+myLuas.getNextLuas(station).then( next =>  console.log(`The next luas at ${station} is in ${next.data.next}`) );
 
 ```
 
-### When the next Luas at the Point 
+### When the next Luas leaving from "the Point" 
 
 https://radiant-plains-56277.herokuapp.com/
+
+NB : This free Heroku server can be sloooow... 😅
 
 ### To run
 
