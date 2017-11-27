@@ -8,9 +8,14 @@ let myLuas = require('./myLuas.js');
 
 let station = 'tpt';
 
-myLuas.getNextLuas(station).then( next =>  console.log(`The next luas at ${station} is in ${next.data.next}`) );
+myLuas.getNextLuas(station)
+        .then( next =>  res.json({code:200, next}) )
+        .catch( error => res.json( {code: 500, error: error} ) );
 
 ```
+
+If the service is over for the day, this will still return a ```200``` code but with the message ```!``` ( because I use a one digit display to show this information ¯\_(ツ)_/¯ )
+
 
 ### When the next Luas leaving from "the Point" 
 
