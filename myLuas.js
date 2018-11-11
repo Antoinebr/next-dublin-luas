@@ -1,37 +1,43 @@
-module.exports = (function() {
-   
-    const axios = require('axios');
-    
-    const parseXml = require('xml2js').parseString;
-    
-    return {
+const fetch = require('node-fetch');
+const parseXml = require('xml2js').parseString;
 
-        getNextLuas: function(station) {
 
-            return new Promise( (resolve, reject) => {  
-      
-                axios.get(`https://luasforecasts.rpa.ie/xml/get.ashx?stop=${station}&action=forecast&encrypt=false`)
-                .then(response => {
-                            
-                    parseXml(response.data, { mergeAttrs: true, explicitArray: false }, (err, result) => {
-                
-                        let when = result.stopInfo.direction[1].tram[0].dueMins;
+exports.getNextLuas = station => {
 
-                        if (err) reject('XML_PARSE_ERROR');
-                        
-                        if (typeof(when) === 'undefined' ) resolve ('!');
+    return new Promise((resolve, reject) => {
 
-                        else resolve( (when === "DUE") ? 0 : when );
-                        
+        fetch(`https://luasforecasts.rpa.ie/xml/get.ashx?stop=${station}&action=forecast&encrypt=false`)
+            .then(response => response.text())
+            .then(response => {
+
+                // if the API raises an exception
+                if (response.includes('Exception')) {
+                    return reject({
+                        code: 500,
+                        response
                     });
-                                
-                })
-                .catch(error =>  reject(error) );
-    
-            })
-        }
-    };
-  
-  }());
+                }
 
-  
+                parseXml(response, {
+                    mergeAttrs: true,
+                    explicitArray: false
+                }, (err, result) => {
+
+
+                    if (err) {
+                        return reject(`XML error ${err}`);
+                    }
+
+                    return resolve(result);
+
+                });
+
+            })
+            .catch(error => reject(error));
+
+    });
+}
+
+
+
+exports.luasList = () => require('./luasList.json');

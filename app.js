@@ -1,29 +1,49 @@
+const express = require('express');
+const cors = require('cors');
+const app = express();
+const myLuas = require('./myLuas.js');
 
-var express = require('express');
-var cors = require('cors');
-var app = express();
-
-const PORT = process.env.PORT || 8000;
-
-
-let myLuas = require('./myLuas.js');
-
-let station = 'tpt';
 
 app.use(cors());
 
+/** 
+ * 
+ * @method get /info/stations
+ * @param {string} station the station code 
+ * @returns {object}
+ * @example GET http://localhost:7777/info/SDK 
+ */
+app.get('/info/:station', async (req, res, next) => {
 
-app.get('*', function (req, res, next) {
+  (async () => {
 
-    myLuas.getNextLuas(station)
-        .then( next =>  res.json({code:200, next}) )
-        .catch( error => res.json( {code: 500, error: error} ) );
-})
+    const stationInfo = await myLuas.getNextLuas(req.params.station);
 
-app.listen(PORT, function () {
-  console.log(`CORS-enabled web server listening on port ${PORT} `);
-})
+    res.json({
+      code: 200,
+      stationInfo
+    })
 
 
+  })()
+  .catch(e => res.json(e))
 
 
+});
+
+
+/** 
+ * Get the stations code / number and name 
+ * @method get /list
+ * @returns {object}
+ * @example GET http://localhost:7777/list
+ */
+app.get('/list', (req, res, next) => res.json(myLuas.luasList()));
+
+
+
+app.set('port', process.env.PORT || 7777);
+
+const server = app.listen(app.get('port'), () => {
+  console.log(`Express running → PORT ${server.address().port}`);
+});

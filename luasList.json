@@ -1,0 +1,293 @@
+[{
+    "name": "St. Stephen's Green",
+    "code": "STX",
+    "num": 72
+}, {
+    "name": "Heuston",
+    "code": "HIN",
+    "num": 73
+}, {
+    "name": "Heuston",
+    "code": "HCT",
+    "num": 74
+}, {
+    "name": "The Point",
+    "code": "TPT",
+    "num": 57
+}, {
+    "name": "Spencer Dock",
+    "code": "SDK",
+    "num": 56
+}, {
+    "name": "Mayor Square",
+    "code": "MYS",
+    "num": 55
+}, {
+    "name": "George's Dock",
+    "code": "GDK",
+    "num": 54
+}, {
+    "name": "Connolly",
+    "code": "CON",
+    "num": 23
+}, {
+    "name": "Busáras",
+    "code": "BUS",
+    "num": 22
+}, {
+    "name": "Abbey Street",
+    "code": "ABB",
+    "num": 21
+}, {
+    "name": "Jervis",
+    "code": "JER",
+    "num": 20
+}, {
+    "name": "Four Courts",
+    "code": "FOU",
+    "num": 19
+}, {
+    "name": "Smithfield",
+    "code": "SMI",
+    "num": 18
+}, {
+    "name": "Museum",
+    "code": "MUS",
+    "num": 17
+}, {
+    "name": "Heuston",
+    "code": "HEU",
+    "num": 16
+}, {
+    "name": "James's",
+    "code": "JAM",
+    "num": 15
+}, {
+    "name": "Fatima",
+    "code": "FAT",
+    "num": 14
+}, {
+    "name": "Rialto",
+    "code": "RIA",
+    "num": 13
+}, {
+    "name": "Suir Road",
+    "code": "SUI",
+    "num": 12
+}, {
+    "name": "Goldenbridge",
+    "code": "GOL",
+    "num": 11
+}, {
+    "name": "Drimnagh",
+    "code": "DRI",
+    "num": 10
+}, {
+    "name": "Blackhorse",
+    "code": "BLA",
+    "num": 9
+}, {
+    "name": "Bluebell",
+    "code": "BLU",
+    "num": 8
+}, {
+    "name": "Kylemore",
+    "code": "KYL",
+    "num": 7
+}, {
+    "name": "Red Cow",
+    "code": "RED",
+    "num": 6
+}, {
+    "name": "Kingswood",
+    "code": "KIN",
+    "num": 5
+}, {
+    "name": "Belgard",
+    "code": "BEL",
+    "num": 4
+}, {
+    "name": "Cookstown",
+    "code": "COO",
+    "num": 3
+}, {
+    "name": "Hospital",
+    "code": "HOS",
+    "num": 2
+}, {
+    "name": "Tallaght",
+    "code": "TAL",
+    "num": 1
+}, {
+    "name": "Fettercairn",
+    "code": "FET",
+    "num": 49
+}, {
+    "name": "Cheeverstown",
+    "code": "CVN",
+    "num": 50
+}, {
+    "name": "Citywest Campus",
+    "code": "CIT",
+    "num": 51
+}, {
+    "name": "Fortunestown",
+    "code": "FOR",
+    "num": 52
+}, {
+    "name": "Saggart",
+    "code": "SAG",
+    "num": 53
+}, {
+    "name": "Depot",
+    "code": "DEP",
+    "num": 58
+}, {
+    "name": "Broombridge",
+    "code": "BRO",
+    "num": 71
+}, {
+    "name": "Cabra",
+    "code": "CAB",
+    "num": 70
+}, {
+    "name": "Phibsborough",
+    "code": "PHI",
+    "num": 69
+}, {
+    "name": "Grangegorman",
+    "code": "GRA",
+    "num": 68
+}, {
+    "name": "Broadstone",
+    "code": "BRD",
+    "num": 67
+}, {
+    "name": "Dominick",
+    "code": "DOM",
+    "num": 66
+}, {
+    "name": "Parnell",
+    "code": "PAR",
+    "num": 65
+}, {
+    "name": "O'Connell",
+    "code": "OUP",
+    "num": 64
+}, {
+    "name": "O'Connell",
+    "code": "OGP",
+    "num": 63
+}, {
+    "name": "Marlborough",
+    "code": "MAR",
+    "num": 62
+}, {
+    "name": "Westmoreland",
+    "code": "WES",
+    "num": 61
+}, {
+    "name": "Trinity",
+    "code": "TRY",
+    "num": 60
+}, {
+    "name": "Dawson",
+    "code": "DAW",
+    "num": 59
+}, {
+    "name": "St. Stephen's Green",
+    "code": "STS",
+    "num": 24
+}, {
+    "name": "Harcourt",
+    "code": "HAR",
+    "num": 25
+}, {
+    "name": "Charlemont",
+    "code": "CHA",
+    "num": 26
+}, {
+    "name": "Ranelagh",
+    "code": "RAN",
+    "num": 27
+}, {
+    "name": "Beechwood",
+    "code": "BEE",
+    "num": 28
+}, {
+    "name": "Cowper",
+    "code": "COW",
+    "num": 29
+}, {
+    "name": "Milltown",
+    "code": "MIL",
+    "num": 30
+}, {
+    "name": "Windy Arbour",
+    "code": "WIN",
+    "num": 31
+}, {
+    "name": "Dundrum",
+    "code": "DUN",
+    "num": 32
+}, {
+    "name": "Balally",
+    "code": "BAL",
+    "num": 33
+}, {
+    "name": "Kilmacud",
+    "code": "KIL",
+    "num": 34
+}, {
+    "name": "Stillorgan",
+    "code": "STI",
+    "num": 35
+}, {
+    "name": "Sandyford",
+    "code": "SAN",
+    "num": 36
+}, {
+    "name": "Central Park",
+    "code": "CPK",
+    "num": 37
+}, {
+    "name": "Glencairn",
+    "code": "GLE",
+    "num": 38
+}, {
+    "name": "The Gallops",
+    "code": "GAL",
+    "num": 39
+}, {
+    "name": "Leopardstown Valley",
+    "code": "LEO",
+    "num": 40
+}, {
+    "name": "Ballyogan Wood",
+    "code": "BAW",
+    "num": 42
+}, {
+    "name": "Racecourse",
+    "code": "RCC",
+    "num": 43
+}, {
+    "name": "Carrickmines",
+    "code": "CCK",
+    "num": 44
+}, {
+    "name": "Brennanstown",
+    "code": "BRE",
+    "num": 45
+}, {
+    "name": "Laughanstown",
+    "code": "LAU",
+    "num": 46
+}, {
+    "name": "Cherrywood",
+    "code": "CHE",
+    "num": 47
+}, {
+    "name": "Bride's Glen",
+    "code": "BRI",
+    "num": 48
+}]
