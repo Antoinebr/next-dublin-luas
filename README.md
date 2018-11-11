@@ -2,7 +2,7 @@
 
 ## Get the infos for a given station
 
-```
+```JavaScript
 /** 
  * 
  * @method get /info/:stationsCode
@@ -14,7 +14,7 @@
 
 ## Get the stations with their name and code
 
-```
+```JavaScript 
 /** 
  * Get the stations code / number and name 
  * @method get /list
