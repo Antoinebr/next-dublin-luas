@@ -11,12 +11,10 @@ exports.getNextLuas = station => {
             .then(response => {
 
                 // if the API raises an exception
-                if (response.includes('Exception')) {
-                    return reject({
-                        code: 500,
-                        response
-                    });
-                }
+                if (response.includes('Exception')) return reject({
+                    code: 500,
+                    response
+                });
 
                 parseXml(response, {
                     mergeAttrs: true,
@@ -24,9 +22,7 @@ exports.getNextLuas = station => {
                 }, (err, result) => {
 
 
-                    if (err) {
-                        return reject(`XML error ${err}`);
-                    }
+                    if (err) return reject(`XML error ${err}`);
 
                     return resolve(result);
 
