@@ -21,7 +21,7 @@
 
 Returns 
 
-```
+```json
 {
     code: 200,
     stationInfo: {
