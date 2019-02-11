@@ -15,12 +15,19 @@ app.use(cors());
  */
 app.get('/info/:station', async (req, res, next) => {
 
-    const stationInfo = await myLuas.getNextLuas(req.params.station).catch(e => res.json(e))
+  const stationInfo = await myLuas.getNextLuas(req.params.station)
+    .catch(e => {
 
-    res.json({
-      code: 200,
-      stationInfo
-    })
+      res.send(e);
+
+    });
+
+  if (!stationInfo) return;
+
+  res.json({
+    code: 200,
+    stationInfo
+  })
 
 });
 
